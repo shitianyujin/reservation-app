@@ -3,16 +3,23 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductComponent } from './product.component';
 
 const routes: Routes = [
-  { path: '', component: ProductListComponent },
-  { path: 'detail', component: ProductDetailComponent }
+  {
+    path: 'products', component: ProductComponent,
+    children: [
+      { path: '', component: ProductListComponent },
+      { path: 'detail', component: ProductDetailComponent }
+    ]
+  }
 ];
 
 @NgModule({
   declarations: [
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductComponent
   ],
   imports: [
     RouterModule.forChild(routes),
