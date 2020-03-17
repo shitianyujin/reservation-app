@@ -4,11 +4,10 @@
     <div *ngFor="let product of products; let productId = index" class="col-sm">
       <a [routerLink]="[ 'detail/', productId ]">
         <div class="card">
-          <img src="./assets/img/placeholder.png" class="card-img-top" alt="...">
+          <img src="{{product.img}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.
-            </p>
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
           </div>
         </div>
       </a>
