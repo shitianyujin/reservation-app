@@ -22,7 +22,6 @@ export class ProductDetailComponent implements OnInit {
       const productObservable = this.productService.getProductById(params.get('productId')!);
       productObservable.subscribe(
         (data) => {
-          console.log(data);
           this.product = data;
         },
         (err) => { console.log('エラー：' + err) }
