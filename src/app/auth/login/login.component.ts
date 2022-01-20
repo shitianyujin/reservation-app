@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
         this.aushService.login(loginForm.value).subscribe(
             (token) => {
                 console.log("login success!!");
-                console.log(token);
                 this.router.navigate(['/products']);
             },
             (err: HttpErrorResponse) => {
