@@ -1,6 +1,5 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const { createEmitAndSemanticDiagnosticsBuilderProgram } = require('typescript');
 const router = express.Router();
 const config = require('../config');
 const User = require('../model/user');
