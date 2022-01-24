@@ -183,6 +183,7 @@ router.post('/register', function (req, res) {
             {
               title: 'ユーザー登録処理異常終了',
               detail: '登録処理で異常終了が発生しました',
+              err: err
             }
           ]
         });
